@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 import {Route, Routes} from "react-router-dom";
 import NavBar from "./components/NavBar/NavBar";
 import Home from "./container/Home/Home";
@@ -6,14 +6,37 @@ import Add from "./container/Add/Add";
 import About from "./container/About/About";
 import Contacts from "./container/Contacts/Contacts";
 import './App.css';
+import {IApiText, ITextMutation} from "./types";
+import axiosApi from "./axiosApi";
 
 const App:React.FC = () => {
-  return (
+    const [posts, setPosts] = useState<ITextMutation[]>([]);
+
+    const fetchData = useCallback(async () => {
+        try {
+            const response = await axiosApi.get<IApiText>('posts.json');
+            const post = Object.keys(response.data).map((key) => {
+                const newPost = response.data[key];
+                newPost.id = key;
+
+                return newPost;
+            })
+            setPosts(post);
+        } catch (e) {
+            console.log(e)
+        }
+    }, []);
+
+    useEffect(() => {
+        void fetchData();
+    }, [fetchData]);
+
+    return (
    <>
        <header><NavBar /></header>
        <Routes>
            <Route path='/' element={(
-               <Home />
+               <Home posts={posts}/>
            )}/>
            <Route path='/new-post' element={(
                <Add />
