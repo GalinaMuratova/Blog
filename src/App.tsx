@@ -7,7 +7,7 @@ import About from "./container/About/About";
 import Contacts from "./container/Contacts/Contacts";
 import './App.css';
 
-const App = () => {
+const App:React.FC = () => {
   return (
    <>
        <header><NavBar /></header>

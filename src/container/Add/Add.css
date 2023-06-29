@@ -1,0 +1,19 @@
+.add-block {
+    background-color: aliceblue;
+    border-radius: 8px;
+    margin: 0 150px;
+    padding: 0 130px 0 0;
+}
+
+.textarea-description {
+    resize: none;
+    width: auto;
+    height: 200px;
+}
+
+.label-title,
+.label-description {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
