@@ -50,7 +50,7 @@ const PostDetails:React.FC<Props> = ({clean}) => {
             <p className='data'>{text.data}</p>
             <h2>{text.title}</h2>
             <p>{text.description}</p>
-            <Link to='/edit' className='btn btn-dark me-4'>Edit</Link>
+            <Link to={'/edit/'+ id} className='btn btn-dark me-4'>Edit</Link>
             <button onClick={deletePost} className='btn btn-danger'>Delete</button>
         </div>
     );

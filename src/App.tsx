@@ -35,7 +35,9 @@ const App:React.FC = () => {
 
     return (
    <>
-       <header><NavBar /></header>
+       <header>
+           <NavBar />
+       </header>
        <Routes>
            <Route path='/' element={(
                <Home posts={posts}/>
@@ -53,7 +55,7 @@ const App:React.FC = () => {
                <PostDetails clean={fetchData}/>
            )} />
            <Route path='/edit/:id' element={(
-               <Edit />
+               <Edit edit={fetchData}/>
            )} />
        </Routes>
        <footer></footer>

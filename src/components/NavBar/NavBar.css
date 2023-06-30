@@ -4,6 +4,15 @@
     box-shadow: -1px 0 6px -1px rgba(34, 60, 80, 0.2);
 }
 
+.blog-logo {
+    background-image: url("https://knockknockwhoisthere.files.wordpress.com/2018/03/dotblog.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 44px;
+    width: 82px;
+    border-radius: 6px;
+}
+
 .nav-list {
     margin: 0;
     padding: 10px;
@@ -17,7 +26,7 @@
 }
 
 .nav-list a {
-    font-size: 18px;
+  font-size: 18px;
     line-height: 16px;
     color: #111111;
     text-decoration: none;

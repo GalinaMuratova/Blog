@@ -13,7 +13,7 @@ const Post:React.FC<Props> = ({time, title, id}) => {
         <div className="my-4 post-block d-flex flex-column card">
           <p className='card-header post-time'>{time}</p>
           <h4 className='py-4 ps-5 ms-3'>{title}</h4>
-          <Link to={'posts/' + id } className='mx-auto btn btn-light mb-3'>Read more</Link>
+          <Link to={'posts/' + id } className='mx-auto btn btn-light mb-3'>Read more {'>>'}</Link>
         </div>
     );
 };

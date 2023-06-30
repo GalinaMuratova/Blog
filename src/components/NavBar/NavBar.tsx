@@ -1,11 +1,11 @@
 import React from 'react';
-import {NavLink} from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
 import "./NavBar.css"
 
 const NavBar = () => {
     return (
         <div className='header d-flex justify-content-around'>
-            <h4>My blog</h4>
+            <Link to='/' className='blog-logo' />
             <nav className="main-nav">
                 <ul className='nav-list'>
                     <li><NavLink to="/">Home</NavLink></li>

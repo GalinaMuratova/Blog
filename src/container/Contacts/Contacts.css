@@ -6,6 +6,14 @@
     padding: 0 0 50px;
 }
 
+.contact-title {
+    background-image: url("https://static.thenounproject.com/png/4972750-200.png");
+    background-position: 600px center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 39px;
+}
+
 .social {
     text-decoration: none;
     color: black;

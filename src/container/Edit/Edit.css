@@ -1,4 +1,4 @@
-.add-block {
+.edit-block {
     background-color: aliceblue;
     border-radius: 8px;
     margin: 25px 150px;
@@ -6,8 +6,8 @@
     box-shadow: -1px 0 6px -1px rgba(34, 60, 80, 0.2);
 }
 
-.add-title {
-    background-image: url("https://cdn-icons-png.flaticon.com/512/8173/8173351.png");
+.edit-title {
+    background-image: url("https://cdn2.iconfinder.com/data/icons/lucid-generic/24/edit_update_pencil_post_write-512.png");
     background-position: 700px center;
     background-repeat: no-repeat;
     background-size: contain;

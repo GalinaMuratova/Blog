@@ -11,7 +11,7 @@ const Home:React.FC<Props> = ({posts}) => {
     const reversedPosts = [...posts].reverse();
     return (
         <div className='home-block'>
-            <h2 className="text-center py-3 mt-4">Home page</h2>
+            <h2 className="text-center main-title-home">All posts</h2>
             {reversedPosts.map((el) => (
                     <Post key={el.id} time={el.data} title={el.title} id={el.id}/>
                 ))}

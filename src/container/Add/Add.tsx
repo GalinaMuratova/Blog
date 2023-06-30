@@ -86,7 +86,7 @@ const Add:React.FC<Props> = ({add}) => {
 
     return (
         <div>
-            <h2 className="text-center py-3 mt-4">Add post</h2>
+            <h2 className="text-center add-title">Add post</h2>
             <div className="add-block p-4 text-center">
                 {form}
             </div>
