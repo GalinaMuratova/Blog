@@ -1,11 +1,15 @@
 import React, {useCallback, useEffect, useState} from 'react';
-import {Link, useParams} from "react-router-dom";
+import {Link, useNavigate, useParams} from "react-router-dom";
 import axiosApi from "../../axiosApi";
 import {IText} from "../../types";
 import './PostDetails.css';
 import Spinner from "../../components/Spinner/Spinner";
 
-const PostDetails = () => {
+interface Props {
+    clean: () => void;
+}
+
+const PostDetails:React.FC<Props> = ({clean}) => {
     const [text, setText] = useState<IText>({
         title:'',
         description: '',
@@ -14,6 +18,7 @@ const PostDetails = () => {
     const [loading, setLoading] = useState(false);
 
     const { id } = useParams();
+    const navigate = useNavigate();
 
     const fetchData = useCallback(async () => {
         setLoading(true);
@@ -25,6 +30,17 @@ const PostDetails = () => {
         }
     }, [id]);
 
+    const deletePost = (async () => {
+        setLoading(true);
+        try {
+            await axiosApi.delete(`/posts/${id}.json`);
+        } finally {
+            setLoading(false);
+            navigate('/');
+            clean();
+        }
+    });
+
     useEffect(() => {
         void fetchData();
     }, [fetchData]);
@@ -35,14 +51,14 @@ const PostDetails = () => {
             <h2>{text.title}</h2>
             <p>{text.description}</p>
             <Link to='/edit' className='btn btn-dark me-4'>Edit</Link>
-            <button className='btn btn-danger'>Delete</button>
+            <button onClick={deletePost} className='btn btn-danger'>Delete</button>
         </div>
     );
 
     if (loading) {
        post = <div className='text-center'>
            <Spinner />
-           </div>;
+       </div>;
     }
 
     return (

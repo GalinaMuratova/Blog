@@ -50,10 +50,10 @@ const App:React.FC = () => {
                <Contacts />
            )} />
            <Route path='/posts/:id' element={(
-               <PostDetails/>
+               <PostDetails clean={fetchData}/>
            )} />
            <Route path='/edit/:id' element={(
-               <Edit></Edit>
+               <Edit />
            )} />
        </Routes>
        <footer></footer>

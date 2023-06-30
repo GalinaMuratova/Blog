@@ -13,7 +13,7 @@ const Home:React.FC<Props> = ({posts}) => {
         <div className='home-block'>
             <h2 className="text-center py-3 mt-4">Home page</h2>
             {reversedPosts.map((el) => (
-                    <Post time={el.data} title={el.title} id={el.id}/>
+                    <Post key={el.id} time={el.data} title={el.title} id={el.id}/>
                 ))}
         </div>
     );
