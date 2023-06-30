@@ -1,8 +1,9 @@
 .post-block {
     border-radius: 6px;
     margin: 0 160px;
-    background-color: #f8f9fa;
+    background-color: white;
     border: none;
+    box-shadow: -1px 0 6px -1px rgba(34, 60, 80, 0.2);
 }
 
 .post-time {

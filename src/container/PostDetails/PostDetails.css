@@ -1,0 +1,19 @@
+.post-details {
+    background-color: #f8f9fa;
+}
+
+.post-details-block {
+    padding: 0 50px 30px;
+    font-size: 18px;
+    line-height: 40px;
+    background-color: white;
+    margin: 30px 160px;
+    border-radius: 6px;
+    box-shadow: -1px 0 6px -1px rgba(34, 60, 80, 0.2);
+}
+
+.data {
+    font-size: 16px;
+    color: gray;
+    padding: 20px 0 0;
+}

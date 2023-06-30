@@ -1,3 +1,10 @@
+.contact-block {
+    box-shadow: -1px 0 6px -1px rgba(34, 60, 80, 0.2);
+    background-color: white;
+    border-radius: 6px;
+    margin: 30px 160px;
+    padding: 0 0 50px;
+}
 
 .social {
     text-decoration: none;

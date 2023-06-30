@@ -8,6 +8,8 @@ import Contacts from "./container/Contacts/Contacts";
 import './App.css';
 import {IApiText, ITextMutation} from "./types";
 import axiosApi from "./axiosApi";
+import PostDetails from "./container/PostDetails/PostDetails";
+import Edit from "./container/Edit/Edit";
 
 const App:React.FC = () => {
     const [posts, setPosts] = useState<ITextMutation[]>([]);
@@ -39,13 +41,19 @@ const App:React.FC = () => {
                <Home posts={posts}/>
            )}/>
            <Route path='/new-post' element={(
-               <Add />
+               <Add add={fetchData}/>
            )} />
            <Route path='/about' element={(
                <About />
            )} />
            <Route path='/contacts' element={(
                <Contacts />
+           )} />
+           <Route path='/posts/:id' element={(
+               <PostDetails/>
+           )} />
+           <Route path='/edit/:id' element={(
+               <Edit></Edit>
            )} />
        </Routes>
        <footer></footer>

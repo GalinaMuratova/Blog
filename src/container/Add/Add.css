@@ -1,8 +1,9 @@
 .add-block {
     background-color: aliceblue;
     border-radius: 8px;
-    margin: 0 150px;
+    margin: 25px 150px;
     padding: 0 130px 0 0;
+    box-shadow: -1px 0 6px -1px rgba(34, 60, 80, 0.2);
 }
 
 .textarea-description {
